@@ -1,0 +1,12 @@
+[Unit]
+Description=keyfob Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/keyfob.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
